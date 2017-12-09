@@ -1,3 +1,23 @@
 body {
-  background: yellow;
+  box-sizing: border-box;
+  background: black;
+  margin: 0;
+  text-align: center;
+  padding-top: 20px;
+}
+
+canvas {
+  background: rgba(46, 17, 45, 1);
+}
+
+
+div {
+  width: 560px;
+  background: rgba(191,42,42,1);
+  height: 30px;
+  font-size: 20px;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
 }
