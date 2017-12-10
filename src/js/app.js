@@ -115,7 +115,7 @@ let animate = () => {
       // snake[0].isHead = false;
       food.isFood = false;
 
-      snake.push(food); // insert the 'food' as new head
+      snake.push(food); 
 
       // update directions
       let tail = snake[snake.length -2];
