@@ -112,15 +112,16 @@ let animate = () => {
       audio.play();
 
       // update properties
-      snake[0].isHead = false;
+      // snake[0].isHead = false;
       food.isFood = false;
 
-      snake.unshift(food); // insert the 'food' as new head
+      snake.push(food); // insert the 'food' as new head
 
       // update directions
-      food.way = snake[1].way;
-      food.x += snake[0].s*snake[0].way.x;
-      food.y += snake[0].s*snake[0].way.y;
+      let tail = snake[snake.length -2];
+      food.way = tail.way;
+      food.x = tail.x + tail.s*(-tail.way.x);
+      food.y = tail.y + tail.s*(-tail.way.y);
 
       // update score
       player.score += 1;
@@ -129,7 +130,7 @@ let animate = () => {
 
       resolveBorder(food); // avoids bug when the food is spawned at the border
 
-      snake[0].isHead = true; // update property
+      // snake[0].isHead = true; // update property
 
       // set loc for new food
       let loc =  {
